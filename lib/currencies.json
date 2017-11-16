@@ -1,4 +1,7 @@
 {
+    "CoinFloor": [
+        "GBP"
+    ],
     "Kraken": [
         "EUR",
         "USD"

@@ -279,6 +279,11 @@ class LocalBitcoins(ExchangeBase):
                              '/bitcoinaverage/ticker-all-currencies/')
         return dict([(r, Decimal(json[r]['rates']['last'])) for r in json])
 
+class CoinFloor(ExchangeBase):
+
+    def get_rates(self, ccy):
+        json = self.get_json('webapi.coinfloor.co.uk:8090/bist/BCH/GBP', '/ticker/')
+        return {'GBP': Decimal(json['last'])}
 
 class MercadoBitcoin(ExchangeBase):
 
