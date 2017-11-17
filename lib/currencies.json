@@ -2,6 +2,12 @@
     "CoinFloor": [
         "GBP"
     ],
+    "CEXIO": [
+        "GBP",
+        "EUR",
+        "USD",
+        "BTC"
+    ],
     "Kraken": [
         "EUR",
         "USD"
