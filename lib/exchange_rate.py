@@ -293,6 +293,12 @@ class CEXIO(ExchangeBase):
         json = self.get_json('cex.io', '/api/ticker/BCH/%s' % ccy)
         return { ccy : Decimal(json['last'])}
 
+class BtcMarkets(ExchangeBase):
+    # BtcMarkets - Australian Exchange - AUD
+    def get_rates(self, ccy):
+        json = self.get_json('api.btcmarkets.net', '/market/BCH/%s/tick' % ccy)
+        return { ccy : Decimal(json['lastPrice'])}
+
 class MercadoBitcoin(ExchangeBase):
 
     def get_rates(self, ccy):
